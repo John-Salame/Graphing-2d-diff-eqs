@@ -149,6 +149,7 @@ function drawGraph(x0, y0)
 	
 	//reverse the array so the last point is (x0, y0)
 	points.reverse();
+	t = 0;
 	while(t < tMax)
 	{
 		t += tStep;
