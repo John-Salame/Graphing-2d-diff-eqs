@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>EigenSpace</title>
+	<script src = "p5.js"></script>
+  </head>
+  <body>
+    <h1>Show EigenSpace and Vector Field</h1>
+	<h2>
+	  Press Update Graph every time you change equations or window.<br/>
+	  Click inside the window to make a graph appear at that point.
+	</h2>
+	<p>
+	  Sample Data for Shapes:<br/>
+	  For orbit: 2, -4, 4, -2 <br/>
+	  Two negative real Eigen Values: -1, 3, 2, -8 <br/>
+	  Explosion: 2, 0, 0, 2 (best viewed with tMin = 0) <br/>
+	  Repeated: 3, -1, 1, 1 (ccw) or 3, 1, -1, 1 (clockwise)
+	</p>
+	<div id="equations">
+	  X' = <input id="xPrimeX" value="1">x + <input id="xPrimeY" value="-3">y
+	  <br/>
+	  Y' = <input id="yPrimeX" value="2">x + <input id="yPrimeY" value="3">y
+	</div>
+	<br/>
+	
+	<div id="window">
+	  <h3>Window:</h3>
+	  X Min = <input id="xMin" value="-10"> X Max = <input id="xMax" value="10"> <br/>
+	  Y Min = <input id="yMin" value="-10"> Y Max = <input id="yMax" value="10"> <br/>
+	  X Interval = <input id="xInterval" value="2"> Y Interval = <input id="yInterval" value="2">
+	</div>
+	<br/>
+	
+	<div id="tSteps">
+	  <h3>Set Your t-step and the Max and Min t:</h3>
+	  <p>*A smaller t-step makes a more detailed graph</p>
+	  <p>*The Min and Max t values change how much of the graph is visible (how many points are calculated)</p>
+	  t-step = <input id="tStep" value="0.01"> <br/>
+	  t Min = <input id="tMin" value="-3"> t Max <input id="tMax" value="3">
+	</div>
+	<br/>
+	
+	<div id="vector">
+		<h3>Show Vector Field</h3>
+		<p>Please select below whether to show or hide the vector field.</p>
+		<p>Note: Selecting hide and then adding / updating the graph while other graphs are present will delete all existing graphs.</p>
+		<select id="showVectors">
+		  <option value="show">Show</option>
+		  <option value="hide">Hide</option>
+		</select>
+	</div>
+	<br/>
+	
+	<div id="update">
+	  <button id="update" onclick="newGraph()">Update Graph</button>
+	</div>
+	<br/>
+	
+    <script src = "graph.js"></script>
+  </body>
+</html>
